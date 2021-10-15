@@ -1,25 +1,25 @@
-package tierra_media;
+package tierra_media2;
 
 public class Atraccion {
-	protected String nombre;
-	protected double costo;
-	protected double tiempo;
-	protected int cupo;
+	private String nombreAtraccion;
+	private double costo;
+	private double tiempo;
+	private int cupo;
 	
 	public Atraccion(String nombreAtraccion, double costo, double tiempo, int cupo) {
 		super();
-		this.nombre = nombreAtraccion;
+		this.nombreAtraccion = nombreAtraccion;
 		this.costo = costo;
 		this.tiempo = tiempo;
 		this.cupo = cupo;
 	}
 
 	public String getNombreAtraccion() {
-		return nombre;
+		return nombreAtraccion;
 	}
 
 	public void setNombreAtraccion(String nombreAtraccion) {
-		this.nombre = nombreAtraccion;
+		this.nombreAtraccion = nombreAtraccion;
 	}
 
 	public double getCosto() {
@@ -45,18 +45,11 @@ public class Atraccion {
 	public void setCupo(int cupo) {
 		this.cupo = cupo;
 	}
-	
-	public void usarUnCupo() {
-		this.cupo--;
-	}
 
 	@Override
 	public String toString() {
-		return "Atracción\nNombre [" + nombre + "]\n-Precio: $" + costo + "\n-Duración: " + tiempo + " horas";
-	}
-	
-	public String toString2() {
-		return nombre + " ";
+		return "Atraccion [nombreAtraccion=" + nombreAtraccion + ", costo=" + costo + ", tiempo=" + tiempo + ", cupo="
+				+ cupo + "]";
 	}
 	
 	
