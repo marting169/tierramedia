@@ -1,4 +1,4 @@
-package tierra_media;
+package tierra_media3;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -82,7 +82,13 @@ public class Ofertador {
 			usuario.setPresupuesto(presupuesto);
 			usuario.setTiempo_disponible(tiempoDisponible);
 			usuario.setItinerario(itinerarios);
-			System.out.println("FIN-----------------------------------------------------\n");
+			System.out.println("-----------------------------------------------------\n");
+		}
+	}
+
+	public void listarItinerarios() {
+		for (Atraccion itinerario : this.itinerarios) {
+			System.out.println(itinerario.toString());
 		}
 	}
 }

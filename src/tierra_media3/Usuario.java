@@ -1,4 +1,4 @@
-package tierra_media;
+package tierra_media3;
 
 import java.util.ArrayList;
 
@@ -36,12 +36,6 @@ public class Usuario {
 
 	public ArrayList<Atraccion> getItinerario() {
 		return itinerario;
-	}
-	
-	public void listarItinerarios() {
-		for (Atraccion itinerarioA : this.itinerario) {
-			System.out.println(itinerarioA.toString());
-		}
 	}
 
 	public void setItinerario(ArrayList<Atraccion> itinerario) {
