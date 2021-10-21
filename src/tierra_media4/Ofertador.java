@@ -1,11 +1,10 @@
-package tierra_media;
+package tierra_media4;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ofertador {
-	private ArrayList<Producto> itinerarios;
-	private ArrayList<Atraccion> soloAtracciones;
+	private ArrayList<Atraccion> itinerarios;
 
 	public Ofertador() {
 	}
@@ -18,19 +17,16 @@ public class Ofertador {
 		System.out.println("Bienvenido/a a la Tierra Media");
 		System.out.println("-----------------------------------------------------\n");
 		for (Usuario usuario : usuariosU) {
-			itinerarios = new ArrayList<Producto>();
-			soloAtracciones = new ArrayList<Atraccion>();
+			itinerarios=new ArrayList<Atraccion>();
 			presupuesto = usuario.getPresupuesto();
 			tiempoDisponible = usuario.getTiempo_disponible();
 			System.out.println("Nombre de visitante: " + usuario.getNombre() + "\n");
 			for (Promocion promocion : promocionesP) {
 				String input;
 				Scanner sc = new Scanner(System.in);
-				// promocion.atraccionIncluida(usuario)
-				//usuario.atraccionIncluidaEnPromocion(promocion.obtenerAtracciones())
+				promocion.setCupo();
 				if (presupuesto >= promocion.getConDescuento() && tiempoDisponible >= promocion.getTiempo()
-						&& promocion.obtenerCupoMinimo() > 0
-						&& !promocion.atraccionIncluidaEnPromocion(soloAtracciones)) {
+						&& promocion.getCupo() > 0) {
 					System.out.println(promocion.toString());
 					System.out.println("\nAcepta sugerencia? Ingrese S o N");
 					input = sc.next();
@@ -38,8 +34,6 @@ public class Ofertador {
 					while (band == false) {
 						if (input.equals("S") || input.equals("s")) {
 							this.itinerarios.add(promocion);
-							this.soloAtracciones.addAll(promocion.obtenerAtracciones());
-
 							System.out.println("¡Aceptada!");
 							band = true;
 							promocion.decrementarCupos();
@@ -61,7 +55,7 @@ public class Ofertador {
 				String input;
 				Scanner sc = new Scanner(System.in);
 				if (presupuesto >= atraccion.getCosto() && tiempoDisponible >= atraccion.getTiempo()
-						&& atraccion.getCupo() > 0 && !soloAtracciones.contains(atraccion)) {
+						&& atraccion.getCupo() > 0 ) {
 					System.out.println(atraccion.toString());
 					System.out.println("\nAcepta sugerencia? Ingrese S o N");
 					input = sc.nextLine();
@@ -69,11 +63,10 @@ public class Ofertador {
 					while (band == false) {
 						if (input.equals("S") || input.equals("s")) {
 							this.itinerarios.add(atraccion);
-							this.soloAtracciones.add(atraccion);
 							System.out.println("¡Aceptada!");
 							band = true;
 							atraccion.usarUnCupo();
-							presupuesto -= atraccion.getCosto();
+							presupuesto-=atraccion.getCosto();
 							tiempoDisponible -= atraccion.getTiempo();
 							System.out.println("-----------------------------------------------------\n");
 						} else if (input.equals("N") || input.equals("n")) {
@@ -90,7 +83,6 @@ public class Ofertador {
 			usuario.setPresupuesto(presupuesto);
 			usuario.setTiempo_disponible(tiempoDisponible);
 			usuario.setItinerario(itinerarios);
-			usuario.setSoloAtracciones(soloAtracciones);
 			System.out.println("FIN-----------------------------------------------------\n");
 		}
 	}

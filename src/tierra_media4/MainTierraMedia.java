@@ -1,4 +1,4 @@
-package tierra_media;
+package tierra_media4;
 
 import java.util.ArrayList;
 
@@ -24,8 +24,8 @@ public class MainTierraMedia {
 		Ofertador ofertas=new Ofertador();
 		ofertas.generarOferta(atraccionesDisponibles, promocionesDisponibles, usuarios);
 		listaDeUsuarios.listarUsuarios();
-		//listaDeAtracciones.listarAtracciones();
-		//listaDePromociones.listarPromociones();
+		listaDeAtracciones.listarAtracciones();
+		listaDePromociones.listarPromociones();
 	}
 
 }

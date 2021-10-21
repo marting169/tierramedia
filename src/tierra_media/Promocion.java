@@ -2,11 +2,11 @@ package tierra_media;
 
 import java.util.ArrayList;
 
-public abstract class Promocion extends Atraccion{
+public abstract class Promocion extends Producto{
 	protected ArrayList<Atraccion> atracciones;
 
-	public Promocion(String nombreAtraccion, double costo, double tiempo, int cupo, ArrayList<Atraccion> atracciones) {
-		super(nombreAtraccion, costo, tiempo, cupo);
+	public Promocion(String nombreAtraccion, double costo, double tiempo, ArrayList<Atraccion> atracciones) {
+		super(nombreAtraccion, costo, tiempo);
 		this.atracciones = atracciones;
 	}
 
@@ -14,23 +14,24 @@ public abstract class Promocion extends Atraccion{
 		for (Atraccion atraccion : atracciones) {
 			atraccion.usarUnCupo();
 		}
-		this.cupo--;
 	}
 
 	
-	public void setCupo() {
-		int suma3 = 0;
+	public int obtenerCupoMinimo() {
+		int minimo = 1000;
 		for (Atraccion atraccion : atracciones) {
-			if (atraccion.getCupo() > 1) {
-				suma3 += atraccion.getCupo();
-			} else {
-				throw new RuntimeException("La atracción " + atraccion.getNombreAtraccion() + " no tiene cupo.");
+			if (atraccion.getCupo() < minimo) {
+				minimo = atraccion.getCupo();
 			}
 		}
-		this.cupo = suma3;
+		return minimo;
 	}
 
 	
+	public ArrayList<Atraccion> obtenerAtracciones() {
+		return atracciones;
+	}
+
 	public String getAtracciones() {
 		String respuesta = "[";
 		for (Atraccion atraccionA : atracciones) {
@@ -41,6 +42,20 @@ public abstract class Promocion extends Atraccion{
 	}
 
 	protected abstract double getConDescuento();
+	
+	public boolean atraccionIncluida(Atraccion nuevaAtraccion) {
+		return this.atracciones.contains(nuevaAtraccion);
+	}
+
+	public boolean atraccionIncluidaEnPromocion(ArrayList<Atraccion> soloAtracciones) {
+		boolean existe=false;
+		int i=0;
+		while(i< soloAtracciones.size() && !existe) {
+			existe = this.atraccionIncluida(soloAtracciones.get(i));
+			i++;
+		}
+		return existe;
+	}
 	
 	
 }

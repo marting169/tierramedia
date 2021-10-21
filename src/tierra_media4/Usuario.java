@@ -1,4 +1,4 @@
-package tierra_media;
+package tierra_media4;
 
 import java.util.ArrayList;
 
@@ -6,14 +6,12 @@ public class Usuario {
 	private String nombre;
 	private double presupuesto;
 	private double tiempo_disponible;
-	private ArrayList<Producto> itinerario;
-	private ArrayList<Atraccion> soloAtracciones;
+	private ArrayList<Atraccion> itinerario;
 
 	public Usuario(String nombre, double presupuesto, double tiempo_disponible) {
 		this.nombre = nombre;
 		this.presupuesto = presupuesto;
 		this.tiempo_disponible = tiempo_disponible;
-		this.soloAtracciones=new ArrayList<Atraccion>();
 	}
 
 	public double getPresupuesto() {
@@ -36,22 +34,18 @@ public class Usuario {
 		return this.nombre;
 	}
 
-	public ArrayList<Producto> getItinerario() {
+	public ArrayList<Atraccion> getItinerario() {
 		return itinerario;
 	}
 	
 	public void listarItinerarios() {
-		for (Producto itinerarioA : this.itinerario) {
+		for (Atraccion itinerarioA : this.itinerario) {
 			System.out.println(itinerarioA.toString());
 		}
 	}
 
-	public void setItinerario(ArrayList<Producto> itinerarios) {
-		this.itinerario = itinerarios;
-	}
-
-	public ArrayList<Atraccion> getSoloAtracciones() {
-		return soloAtracciones;
+	public void setItinerario(ArrayList<Atraccion> itinerario) {
+		this.itinerario = itinerario;
 	}
 
 	@Override
@@ -60,20 +54,5 @@ public class Usuario {
 				+ ", itinerario=" + itinerario + "]";
 	}
 
-	public void setSoloAtracciones(ArrayList<Atraccion> soloAtracciones) {
-		this.soloAtracciones=soloAtracciones;
-	}
 
-	/*public boolean atraccionIncluida(Atraccion nuevaAtraccion) {
-		return this.soloAtracciones.contains(nuevaAtraccion);
-	}
-	public boolean atraccionIncluidaEnPromocion(ArrayList<Atraccion> soloAtracciones) {
-		boolean existe=false;
-		int i=0;
-		while(i< soloAtracciones.size() && !existe) {
-			existe = this.atraccionIncluida(soloAtracciones.get(i));
-			i++;
-		}
-		return existe;
-	}*/
 }

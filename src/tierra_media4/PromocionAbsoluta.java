@@ -1,4 +1,4 @@
-package tierra_media;
+package tierra_media4;
 
 import java.util.ArrayList;
 
@@ -7,9 +7,9 @@ public class PromocionAbsoluta extends Promocion{
 	private double conDescuento;
 	
 
-	public PromocionAbsoluta(String nombreAtraccion, double costo, double tiempo,
+	public PromocionAbsoluta(String nombreAtraccion, double costo, double tiempo, int cupo,
 			ArrayList<Atraccion> atracciones, double conDescuento) {
-		super(nombreAtraccion, costo, tiempo, atracciones);
+		super(nombreAtraccion, costo, tiempo, cupo, atracciones);
 		setDescuento(conDescuento);
 	}
 
@@ -30,7 +30,7 @@ public class PromocionAbsoluta extends Promocion{
 	@Override
 	public String toString() {
 		return nombre + "\n-Atracciones incluidas: " + this.getAtracciones() + "\n-Duración :" + tiempo
-				+ " horas \n-Precio original: " + costo + "\n-Precio con descuento:" + conDescuento;
+				+ " horas \n-Precio original: " + costo + "\n-Precio con descuento:" + conDescuento+ ", cupo=" + cupo;
 	}
 
 }
