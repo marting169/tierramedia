@@ -1,0 +1,7 @@
+USUARIO: [Nombre=Saruman, Presupuesto=12.0, Tiempo_disponible=0.5]
+ITINERARIO:
+[
+Atraccion
+-Nombre [La Comarca]
+-Precio: $3.0
+-Duracion: 6.5 horas]

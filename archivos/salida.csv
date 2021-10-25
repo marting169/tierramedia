@@ -1,0 +1,34 @@
+Usuario [nombre=Eowyn, presupuesto=0.0, tiempo_disponible=0.5, itinerario=[Pack aventura
+-Atracciones incluidas: [Minas Tirith, Abismo de Helm, Erebor]
+-Duracion :7.5 horas 
+-Precio original: 22.0
+-Precio con descuento:10.0]]Usuario [nombre=Gandalf, presupuesto=70.0, tiempo_disponible=0.0, itinerario=[Atraccion
+-Nombre [Mordor]
+-Precio: $25.0
+-Duracion: 3.0 horas-cupos: 1, Atraccion
+-Nombre [Abismo de Helm]
+-Precio: $5.0
+-Duracion: 2.0 horas-cupos: 13]]Usuario [nombre=Sam, presupuesto=13.600000000000001, tiempo_disponible=1.0, itinerario=[Pack aventura
+-Atracciones incluidas: [Bosque Negro, Mordor]
+-Duracion :7.0 horas 
+-Precio original: 28.0
+-Precio con descuento:22.4]]Usuario [nombre=Galadriel, presupuesto=70.0, tiempo_disponible=0.5, itinerario=[Atraccion
+-Nombre [Moria]
+-Precio: $10.0
+-Duracion: 2.0 horas-cupos: 4, Atraccion
+-Nombre [Minas Tirith]
+-Precio: $5.0
+-Duracion: 2.5 horas-cupos: 22, Atraccion
+-Nombre [Lothlórien]
+-Precio: $35.0
+-Duracion: 1.0 horas-cupos: 29]]Usuario [nombre=Martin, presupuesto=82.6, tiempo_disponible=0.5, itinerario=[Pack aventura
+-Atracciones incluidas: [Bosque Negro, Mordor]
+-Duracion :7.0 horas 
+-Precio original: 28.0
+-Precio con descuento:22.4, Atraccion
+-Nombre [Moria]
+-Precio: $10.0
+-Duracion: 2.0 horas-cupos: 4, Atraccion
+-Nombre [Minas Tirith]
+-Precio: $5.0
+-Duracion: 2.5 horas-cupos: 22]]
