@@ -1,4 +1,4 @@
-USUARIO: [Nombre=Galadriel, Presupuesto=70.0, Tiempo_disponible=0.5]
+USUARIO: [Nombre=Galadriel, Presupuesto=70.0, Tiempo_disponible=1.0]
 ITINERARIO:
 [
 Atraccion
@@ -6,9 +6,9 @@ Atraccion
 -Precio: $10.0
 -Duracion: 2.0 horas, 
 Atraccion
--Nombre [Minas Tirith]
+-Nombre [Abismo de Helm]
 -Precio: $5.0
--Duracion: 2.5 horas, 
+-Duracion: 2.0 horas, 
 Atraccion
 -Nombre [Lothlórien]
 -Precio: $35.0

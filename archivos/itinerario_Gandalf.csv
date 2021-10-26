@@ -1,15 +1,11 @@
-USUARIO: [Nombre=Gandalf, Presupuesto=50.0, Tiempo_disponible=0.0]
+USUARIO: [Nombre=Gandalf, Presupuesto=90.0, Tiempo_disponible=0.5]
 ITINERARIO:
 [
 Atraccion
--Nombre [Moria]
--Precio: $10.0
--Duracion: 2.0 horas, 
+-Nombre [Minas Tirith]
+-Precio: $5.0
+-Duracion: 2.5 horas, 
 Atraccion
 -Nombre [Abismo de Helm]
 -Precio: $5.0
--Duracion: 2.0 horas, 
-Atraccion
--Nombre [Lothlórien]
--Precio: $35.0
--Duracion: 1.0 horas]
+-Duracion: 2.0 horas]
