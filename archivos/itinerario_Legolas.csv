@@ -1,7 +1,11 @@
-USUARIO: [Nombre=Legolas, Presupuesto=14.0, Tiempo_disponible=2.5]
+USUARIO: [Nombre=Legolas, Presupuesto=17.6, Tiempo_disponible=1.0]
 ITINERARIO:
-[Pack degustación
--Atracciones incluidas: [Lothlórien, La Comarca]
--Duracion :7.5 horas 
--Precio original: 38.0
--Precio con descuento:36.0]
+[Pack aventura
+-Atracciones incluidas: [Bosque Negro, Mordor]
+-Duracion :7.0 horas 
+-Precio original: 28.0
+-Precio con descuento:22.4, 
+Atraccion
+-Nombre [Moria]
+-Precio: $10.0
+-Duracion: 2.0 horas]

@@ -1,7 +1,11 @@
-USUARIO: [Nombre=Saruman, Presupuesto=12.0, Tiempo_disponible=0.5]
+USUARIO: [Nombre=Saruman, Presupuesto=0.0, Tiempo_disponible=2.5]
 ITINERARIO:
 [
 Atraccion
--Nombre [La Comarca]
--Precio: $3.0
--Duracion: 6.5 horas]
+-Nombre [Moria]
+-Precio: $10.0
+-Duracion: 2.0 horas, 
+Atraccion
+-Nombre [Minas Tirith]
+-Precio: $5.0
+-Duracion: 2.5 horas]

@@ -1,7 +1,11 @@
-USUARIO: [Nombre=Gollum, Presupuesto=30.0, Tiempo_disponible=2.5]
+USUARIO: [Nombre=Gollum, Presupuesto=7.600000000000001, Tiempo_disponible=1.0]
 ITINERARIO:
 [Pack aventura
--Atracciones incluidas: [Minas Tirith, Abismo de Helm, Erebor]
--Duracion :7.5 horas 
--Precio original: 22.0
--Precio con descuento:10.0]
+-Atracciones incluidas: [Bosque Negro, Mordor]
+-Duracion :7.0 horas 
+-Precio original: 28.0
+-Precio con descuento:22.4, 
+Atraccion
+-Nombre [Moria]
+-Precio: $10.0
+-Duracion: 2.0 horas]
